@@ -1,3 +1,24 @@
+<?php
+
+session_start();
+
+$host = "Localhost";
+$user = "root";
+$pass = "root";
+$db = "sistema_simples";
+
+$conn = new mysqli($host, $user, $pass, $db);
+
+if ($conn->connect_error){
+    echo "<script> console.log ('erro na conexão com o banco') </script>";
+}else{
+    echo "<script> console.log ('conexão com o banco foi um sucesso') </script>";
+}
+?>
+
+
+
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -7,5 +28,23 @@
 </head>
 <body>
     <h1>Tela de Login PHP</h1>
+
+<form mathod="POST">
+
+
+<label for="Usuarios">Usuarios</label>
+<input type="text" name="usuario"> <br>
+<label for="Senha">Senha</label>
+<input type="password" name="senha"> <br>
+
+
+<button> type="submit">Entrar</button>
+
+
+
+
+
+
+
 </body>
 </html>
